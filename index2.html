@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="txttent-Type" txttent="text/html; charset=gb2312" />
+<title>动态网页</title>
+<style type="text/css">
+<body>{ font-size:12px;}
+#txt{
+      height:400px;
+      width:600px;
+      border:#333 solid 20px;
+      padding:50px;
+	}
+p{
+   font-family: 楷体;
+	 line-height:18px;
+	 text-indent:2em;
+  }
+video{
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+        min-width: 100%;
+        min-height: 100%;
+        height: auto;
+        width: auto;
+        z-index: -999;
+    }
+</style>
+</head>
+<body>
+  <div>
+  	<embed src = 'Luv Letter_0.mp3' autostart = 'true' loop = 'true' hidden="true"></embed>
+<video loop autoplay style="border: 1px solid #000;">
+    <source src="190.mp4" type="video/mp4">
+</video>
+</div>
+  <h2 id="con">我的第一个动态网页</h2>
+  <div id="txt"> 
+   <h5 style="font-family：楷体;font-size: 30px;color: #33CC99;line-height: 1em;">动态网页，点！点！点！</h5>
+  <p style="font-family: 楷体;font-size: 20px;font-weight: bold;">1. 点击改变颜色按钮，试试效果？</p>
+   <p style="font-family: 楷体;font-size: 20px;font-weight: bold;">2. 点击改变宽高按钮，哇！竟然真的可以改变尺寸哎！</p>
+   <p style="font-family: 楷体;font-size: 20px;font-weight: bold;">3. 最后，点击隐藏内容，让内容消失吧！
+         还可以点击显示内容，让它回来哦！</p>
+   <p style="font-family:楷体;font-size: 20px;font-weight: bold;">是不是很神奇的东西？想做吗？</p>
+  </div>
+  <form>
+  <input type="button" value="改变颜色" onClick="dcolor()">
+  <input type="button" value="改变宽高" onClick="dwh()">
+  <input type="button" value="隐藏内容" onClick="dh()">
+  <input type="button" value="显示内容" onClick="ds()">
+  <input type="button" value="恢复初始" onClick="dclear()">
+  
+  </form>
+  <script type="text/javascript">
+function dcolor(){
+	 var mychar = document.getElementById("txt");  
+	 mychar.style.color="#CC0033";
+	 mychar.style.backgroundColor="#CCFFFF";
+	}
+   
+function dwh(){
+	 var mychar = document.getElementById("txt");  
+	 mychar.style.width="400px";
+	 mychar.style.height="250px";
+	}
+
+function dh(){
+	 var mychar = document.getElementById("txt");  
+	 mychar.style.display="none";
+	}
+
+function dclear(){
+	if(confirm("确定要取消设置吗?")){
+	 var mychar = document.getElementById("txt");  
+	 mychar.style.color="#000";
+	 mychar.style.backgroundColor="#fff";
+	 mychar.style.width="600px";
+	 mychar.style.height="400px";
+	 mychar.style.display="block";
+	}
+	}
+function ds(){
+	 var mychar = document.getElementById("txt");  
+	 mychar.style.display="block";
+	}
+
+ 
+
+  </script>
+</body>
+
+</html>
